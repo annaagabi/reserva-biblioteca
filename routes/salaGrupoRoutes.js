@@ -134,7 +134,7 @@ router.patch('/:id', async(req, res) =>{
 
     // Verifica se já existe uma reserva para o mesmo Kindle, mesma data e horários sobrepostos
     const existingReservation = await SalaGrupo.findOne({
-        _id: { $ne: id },
+        // _id: { $ne: id },
             idSala,
             data,
             $or: [
