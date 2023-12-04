@@ -123,8 +123,9 @@ router.patch('/:id', async(req, res) =>{
     const id = req.params.id
 
     // o corpo vai vir com os dados que precisam ser atualizados
-    const{  idSala, nome, qtd_pessoas, turma, data, horario_inicial, horario_final, motivo} = req.body
-    if (!idSala|| !nome || !turma || !data || !horario_inicial || !horario_final || motivo) {
+    const { idSala, nome, qtd_pessoas, turma, motivo, data, horario_inicial, horario_final } = req.body;
+
+    if (!idSala || !nome || !qtd_pessoas || !turma || !data || !horario_inicial || !horario_final || !motivo) {
         return res.status(400).json({ message: 'Todos os campos são obrigatórios' });
     }
     if (idSala&& (idSala< 1 || idSala> 2)) {
