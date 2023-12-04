@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 const kindleSchema = new mongoose.Schema({
-    idKindle: String,
+    idKindle: Number,
     nome: String,
     turma: String,
     data: {
