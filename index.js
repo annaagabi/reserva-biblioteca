@@ -32,7 +32,7 @@ app.get('/', (req,res) =>{
 
 // entregar uma porta
 // mongoose.connect( process.env.MONGO ) // conectar ao banco de dados
-mongoose.connect( 'mongodb+srv://'+ process.env.DB_LOGIN + '' + ':' + process.env.DB_PASSWORD + '@bookingteste.meol0nr.mongodb.net/?retryWrites=true&w=majority') // conectar ao banco de dados
+mongoose.connect( 'mongodb+srv://'+ process.env.DB_LOGIN + '' + ':' + process.env.DB_PASSWORD + '.t2ystim.mongodb.net/?retryWrites=true&w=majority&appName=reserva') // conectar ao banco de dados
 .then(() => {
     console.log("Conectamos ao mongo DB")
     app.listen(3000) // Vai ler a porta
